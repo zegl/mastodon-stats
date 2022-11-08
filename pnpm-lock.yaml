@@ -10,14 +10,19 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.27.0
   '@typescript-eslint/parser': ^5.27.0
   autoprefixer: ^10.4.13
+  chart.js: ^3.9.1
+  chartjs-adapter-date-fns: ^2.0.0
+  date-fns: ^2.29.3
   eslint: ^8.16.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^4.0.0
   masto: ^4.4.1
+  moment: ^2.29.4
   postcss: ^8.4.18
   prettier: ^2.6.2
   prettier-plugin-svelte: ^2.7.0
   svelte: ^3.46.0
+  svelte-chartjs: ^3.0.1
   svelte-check: ^2.7.1
   svelte-preprocess: ^4.10.7
   tailwindcss: ^3.2.2
@@ -29,8 +34,13 @@ specifiers:
 dependencies:
   '@types/node': 18.11.9
   autoprefixer: 10.4.13_postcss@8.4.18
+  chart.js: 3.9.1
+  chartjs-adapter-date-fns: 2.0.0_chart.js@3.9.1
+  date-fns: 2.29.3
   masto: 4.4.1
+  moment: 2.29.4
   postcss: 8.4.18
+  svelte-chartjs: 3.0.1_tb3ej74444re4pquu4iiz3h3dy
   tailwindcss: 3.2.2_neo3lunb2qpadwxplzw7r2isgm
   ts-node: 10.9.1_cbe7ovvae6zqfnmtgctpgpys54
 
@@ -716,6 +726,18 @@ packages:
       tslib: 2.4.1
     dev: false
 
+  /chart.js/3.9.1:
+    resolution: {integrity: sha512-Ro2JbLmvg83gXF5F4sniaQ+lTbSv18E+TIf2cOeiH1Iqd2PGFOtem+DUufMZsCJwFE7ywPOpfXFBwRTGq7dh6w==}
+    dev: false
+
+  /chartjs-adapter-date-fns/2.0.0_chart.js@3.9.1:
+    resolution: {integrity: sha512-rmZINGLe+9IiiEB0kb57vH3UugAtYw33anRiw5kS2Tu87agpetDDoouquycWc9pRsKtQo5j+vLsYHyr8etAvFw==}
+    peerDependencies:
+      chart.js: ^3.0.0
+    dependencies:
+      chart.js: 3.9.1
+    dev: false
+
   /chokidar/3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
     engines: {node: '>= 8.10.0'}
@@ -795,6 +817,11 @@ packages:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
     hasBin: true
+    dev: false
+
+  /date-fns/2.29.3:
+    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
+    engines: {node: '>=0.11'}
     dev: false
 
   /debug/4.3.4:
@@ -1749,6 +1776,10 @@ packages:
     hasBin: true
     dev: true
 
+  /moment/2.29.4:
+    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
+    dev: false
+
   /mri/1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
@@ -2282,6 +2313,16 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+  /svelte-chartjs/3.0.1_tb3ej74444re4pquu4iiz3h3dy:
+    resolution: {integrity: sha512-/9TWJ3Ps8XlhtfAZCiuybdMhF66uDnf3lnUk7qkstG/GbXyuSW8HW6Pq/YBIA7ffa6+cRi/jg15YiIwslj6TGw==}
+    peerDependencies:
+      chart.js: ^3.5.0
+      svelte: ^3.45.0
+    dependencies:
+      chart.js: 3.9.1
+      svelte: 3.52.0
+    dev: false
+
   /svelte-check/2.9.2_vidagnlh55bt6yxji7dk5y5wla:
     resolution: {integrity: sha512-DRi8HhnCiqiGR2YF9ervPGvtoYrheE09cXieCTEqeTPOTJzfoa54Py8rovIBv4bH4n5HgZYIyTQ3DDLHQLl2uQ==}
     hasBin: true
@@ -2374,7 +2415,6 @@ packages:
   /svelte/3.52.0:
     resolution: {integrity: sha512-FxcnEUOAVfr10vDU5dVgJN19IvqeHQCS1zfe8vayTfis9A2t5Fhx+JDe5uv/C3j//bB1umpLJ6quhgs9xyUbCQ==}
     engines: {node: '>= 8'}
-    dev: true
 
   /tailwindcss/3.2.2_neo3lunb2qpadwxplzw7r2isgm:
     resolution: {integrity: sha512-c2GtSdqg+harR4QeoTmex0Ngfg8IIHNeLQH5yr2B9uZbZR1Xt1rYbjWOWTcj3YLTZhrmZnPowoQDbSRFyZHQ5Q==}

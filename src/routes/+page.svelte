@@ -1,5 +1,6 @@
 <script lang="ts">
 	import data from '$lib/data/servers.json';
+	import Graph from '$lib/Graph.svelte'
 
 	let sortBy = 'lastWeekStatuses';
 
@@ -32,24 +33,29 @@
 	<meta name="description" content="Mastodon Server Stats" />
 </svelte:head>
 
+<div class="space-y-4">
+
 <p class="text-left">Showing {showServers.length} active Mastodon servers.</p>
 
-<p class="text-gray-400 mt-4">
+<p class="text-gray-400">
 	By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash;
 	<a class="underline" href="https://github.com/zegl/mastodon-stats">Source Code</a><br>
 	Last updated 2022-11-08 &mdash; 🕷
 </p>
 
-<div class="mt-4 flex flex-col">
+<Graph />
+
+<div class="flex flex-col">
 	<div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
 		<div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
 			<div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
 				<table class="min-w-full divide-y divide-gray-300">
 					<thead class="bg-gray-50">
 						<tr>
+							<th>&nbsp;</th>
 							<th
 								scope="col"
-								class="whitespace-nowrap py-3.5 pl-4 text-left text-sm font-semibold text-gray-900 "
+								class="whitespace-nowrap py-3.5 text-left text-sm font-semibold text-gray-900 "
 							>
 								Server
 							</th>
@@ -103,9 +109,10 @@
 						</tr>
 					</thead>
 					<tbody class="divide-y divide-gray-200 bg-white">
-						{#each showServers as server}
+						{#each showServers as server, idx}
 							<tr>
-								<td class="whitespace-nowrap py-2 text-sm text-gray-500 pl-4">
+								<td class="whitespace-nowrap py-2 text-sm text-gray-500 pl-4">#{idx+1}</td>
+								<td class="whitespace-nowrap py-2 text-sm text-gray-500">
 									<strong
 										><a href={'https://' + server.instance.uri}>{server.instance.uri}</a></strong
 									>
@@ -127,4 +134,5 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
