@@ -65,7 +65,7 @@
 		registrations.push({ x: key * 1000, y: value.registrations });
 	}
 
-	statuses = statuses.sort((a, b) => a.x - b.x).slice(-12,);
+	statuses = statuses.sort((a, b) => a.x - b.x).slice(-12);
 	logins = logins.sort((a, b) => a.x - b.x).slice(-12);
 	registrations = registrations.sort((a, b) => a.x - b.x).slice(-12);
 
@@ -117,17 +117,21 @@
 		]
 	};
 
-    let ready = false;
+	let ready = false;
 
-    onMount(() => {
-        ready = true
-    })
+	onMount(() => {
+		ready = true;
+	});
 </script>
 
 {#if ready}
-<div>
-<Line {data} {options} />
+	<div>
+		<Line {data} {options} />
 
-<p class="text-sm text-gray-500 text-center">Servers reports statistics on a weekly basis. The last data point is <strong>incomplete</strong>.</p>
-</div>
+		<p class="text-sm text-gray-500 text-center">
+			Servers reports statistics on a weekly basis. The last data point is <strong
+				>incomplete</strong
+			>.
+		</p>
+	</div>
 {/if}
