@@ -34,12 +34,13 @@
 
 <p class="text-left">Showing {showServers.length} active Mastodon servers.</p>
 
-<p class="text-gray-400">
-	By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash; Last updated 2022-11-08
-	&mdash; 🕷
+<p class="text-gray-400 mt-4">
+	By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash;
+	<a class="underline" href="https://github.com/zegl/mastodon-stats">Source Code</a><br>
+	Last updated 2022-11-08 &mdash; 🕷
 </p>
 
-<div class="mt-8 flex flex-col">
+<div class="mt-4 flex flex-col">
 	<div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
 		<div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
 			<div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
