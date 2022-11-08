@@ -10,20 +10,14 @@
 	const setSort = (key: string) => {
 		sortBy = key;
 	};
-
-	const growth = (s) => {
-		const total = s.instance.stats.userCount;
-		const regs = s.activity[0].registrations;
-		return regs / total;
-	};
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Mastodon Server Stats</title>
+	<meta name="description" content="Mastodon Server Stats" />
 </svelte:head>
 
-<p class="text-left">Showing {showServers.length} active Mastodon servers with more than 10 registered users.</p>
+<p class="text-left">Tracking {showServers.length} active Mastodon servers.</p>
 
 <p class="text-gray-400">By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash; Last updated 2022-11-08 &mdash; 🕷</p>
 
