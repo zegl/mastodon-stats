@@ -16,6 +16,7 @@
 		TimeSeriesScale,
 		Filler
 	} from 'chart.js';
+	import { onMount } from 'svelte';
 
 	ChartJS.register(
 		Title,
@@ -115,10 +116,18 @@
 			}
 		]
 	};
+
+    let ready = false;
+
+    onMount(() => {
+        ready = true
+    })
 </script>
 
+{#if ready}
 <div>
 <Line {data} {options} />
 
 <p class="text-sm text-gray-500 text-center">Servers reports statistics on a weekly basis. The last data point is <strong>incomplete</strong>.</p>
 </div>
+{/if}
