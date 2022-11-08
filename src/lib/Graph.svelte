@@ -35,7 +35,7 @@
 	for (const s of servers) {
 		for (const a of s.activity) {
 			const key = moment(parseInt(a.week) * 1000)
-				.startOf('isoWeek')
+				.endOf('isoweek')
 				.unix();
 
 			if (!weekStats.has(key)) {
@@ -65,9 +65,9 @@
 		registrations.push({ x: key * 1000, y: value.registrations });
 	}
 
-	statuses = statuses.sort((a, b) => a.x - b.x).slice(-12);
-	logins = logins.sort((a, b) => a.x - b.x).slice(-12);
-	registrations = registrations.sort((a, b) => a.x - b.x).slice(-12);
+	statuses = statuses.sort((a, b) => a.x - b.x).slice(-12, -1);
+	logins = logins.sort((a, b) => a.x - b.x).slice(-12, -1);
+	registrations = registrations.sort((a, b) => a.x - b.x).slice(-12, -1);
 
 	let options = {
 		scales: {
@@ -87,10 +87,9 @@
 			{
 				label: 'Statuses',
 				data: statuses,
-
 				fill: true,
 				lineTension: 0.3,
-				backgroundColor: 'rgba(68, 156,181, .3)',
+				backgroundColor: 'rgba(68, 156,181, .1)',
 				borderColor: 'rgba(68, 156,181, 1)',
 				borderCapStyle: 'butt'
 			},
@@ -100,7 +99,7 @@
 
 				fill: true,
 				lineTension: 0.3,
-				backgroundColor: 'rgba(66, 143,38, .3)',
+				backgroundColor: 'rgba(66, 143,38, .1)',
 				borderColor: 'rgba(66, 143,38,1)',
 				borderCapStyle: 'butt'
 			},
@@ -110,7 +109,7 @@
 
 				fill: true,
 				lineTension: 0.3,
-				backgroundColor: 'rgba(150, 94,193, .3)',
+				backgroundColor: 'rgba(150, 94,193, .1)',
 				borderColor: 'rgba(150, 94,193,1)',
 				borderCapStyle: 'butt'
 			}
@@ -129,9 +128,7 @@
 		<Line {data} {options} />
 
 		<p class="text-sm text-gray-500 text-center">
-			Servers reports statistics on a weekly basis. The last data point is <strong
-				>incomplete</strong
-			>.
+			Servers reports statistics on a weekly basis.
 		</p>
 	</div>
 {/if}
