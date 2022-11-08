@@ -34,14 +34,12 @@
 
 <div class="space-y-4">
 	<p class="text-left">
-		Showing {showServers.length} active Mastodon servers.
-		<a class="underline" href="/graph">Show me a graph</a>
+		Showing <strong>{showServers.length}</strong> active Mastodon servers.
 	</p>
 
-	<p class="text-gray-400">
-		By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash;
-		<a class="underline" href="https://github.com/zegl/mastodon-stats">Source Code</a><br />
-		Last updated 2022-11-08 &mdash; 🕷
+	<p class="text-gray-500">
+		By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash; Updated 2022-11-08
+		&mdash; 🕷
 	</p>
 
 	<div class="flex flex-col">
