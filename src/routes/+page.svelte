@@ -32,7 +32,7 @@
 	<meta name="description" content="Mastodon Server Stats" />
 </svelte:head>
 
-<p class="text-left">Tracking {showServers.length} active Mastodon servers.</p>
+<p class="text-left">Showing {showServers.length} active Mastodon servers.</p>
 
 <p class="text-gray-400">
 	By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash; Last updated 2022-11-08
