@@ -25,6 +25,37 @@
 	const setSort = (key: string) => {
 		sortBy = key;
 	};
+	
+	// Covers top 700 servers
+	const fl = {
+		"en": "🇺🇸",
+		"ja": "🇯🇵",
+		"zh-CN": "🇨🇳",
+		"zh-YR": "🇨🇳",
+		"zh-TW": "🇹🇼",
+		"de": "🇩🇪",
+		"fr": "🇫🇷",
+		"es": "🇪🇸",
+		"ko": "🇰🇷",
+		"it": "🇮🇹",
+		"pt-BR": "🇧🇷",
+		"ca": "🏴󠁥󠁳󠁣󠁴󠁿",
+		"sv": "🇸🇪",
+		"fi": "🇫🇮",
+		"pl": "🇵🇱",
+		"he": "🇮🇱",
+		"tr": "🇹🇷"
+	}
+
+	const flags = (instance): string => {
+		let res = "";
+		for(const l of instance.languages) {
+			if (fl[l]) {
+				res += fl[l] + " ";
+			}
+		}
+		return res
+	}
 </script>
 
 <svelte:head>
@@ -115,6 +146,7 @@
 										<strong
 											><a href={'https://' + server.instance.uri}>{server.instance.uri}</a></strong
 										>
+										{flags(server.instance)}
 									</td>
 									<td class="whitespace-nowrap py-2  text-sm text-gray-500 ">
 										{parseInt(server.activity[0].logins).toLocaleString()} / {server.instance.stats.userCount.toLocaleString()}
