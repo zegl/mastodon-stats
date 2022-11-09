@@ -16,6 +16,6 @@
 	</main>
 
 	<p class="text-gray-400 py-2">
-		By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash; Updated 2022-11-08 &mdash; 🕷
+		By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash; Updated 2022-11-09 &mdash; 🕷
 	</p>
 </div>
