@@ -69,7 +69,7 @@
 	</p>
 
 	<p class="text-gray-500">
-		By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash; Updated 2022-11-08
+		By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash; Updated 2022-11-10
 		&mdash; 🕷
 	</p>
 
