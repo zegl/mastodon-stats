@@ -18,6 +18,18 @@ const argv = yargs(process.argv.slice(2))
     default: false,
     demandOption: true,
   })
+  .option('online', {
+    type: 'string',
+    description: 'path to list of known online servers (allowlist)',
+    default: './crawled/online.txt',
+    demandOption: true,
+  })
+  .option('offline', {
+    type: 'string',
+    description: 'path to list of known offline servers (blocklist)',
+    default: './crawled/failed.txt',
+    demandOption: true,
+  })
 	.parseSync();
 
 const timeout = (prom: Promise<any>, time: number) => {
@@ -49,7 +61,7 @@ const fetchedServers = async (): Promise<Set<string>> => {
 }
 
 const failedServers = async (): Promise<Set<string>> => {
-  const fileStream = fs.createReadStream('./crawled/failed.txt');
+  const fileStream = fs.createReadStream(argv.offline);
 
   const rl = readline.createInterface({
     input: fileStream,
@@ -67,7 +79,7 @@ const failedServers = async (): Promise<Set<string>> => {
 
 const onlineServers = async (): Promise<Set<string>> => {
   // known online servers
-  const fileStream = fs.createReadStream('./crawled/online.txt');
+  const fileStream = fs.createReadStream(argv.online);
 
   const rl = readline.createInterface({
     input: fileStream,
@@ -160,7 +172,7 @@ async function main() {
 
     } catch (e) {
       console.log("failed to crawl", hostname)
-      appendFileSync("./craled/failed.txt", hostname + "\n")
+      appendFileSync(argv.offline, hostname + "\n")
       failed.add(hostname)
     }
   }
