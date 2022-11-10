@@ -1,6 +1,7 @@
 <script>
 	import '../app.css';
 	import { page } from '$app/stores';
+	import update from '$lib/data/update.json'
 </script>
 
 <div class="text-gray-700 max-w-5xl mx-auto p-2">
@@ -16,6 +17,6 @@
 	</main>
 
 	<p class="text-gray-400 py-2">
-		By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash; Updated 2022-11-10 &mdash; 🕷
+		By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash; Updated {update.at} &mdash; 🕷
 	</p>
 </div>

@@ -1,0 +1,65 @@
+name: daily crawl
+
+on:
+  schedule:
+    # every day at 4am
+    - cron: '0 4 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Calculate file name
+        id: step_one
+        run: |
+          echo "FILE=./crawled/servers-$(date +%Y-%m-%d).jsonl" >> $GITHUB_ENV
+
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - uses: actions/cache@v3
+        with:
+          path: ${{ env.FILE }}
+          key: crawl-${{ runner.os }}-${{ env.FILE }}
+          restore-keys: |
+            crawl-${{ runner.os }}-
+
+      - name: Set up node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install deps
+        run: sudo apt-get install -y build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.1.5
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
+
+      - name: crawl
+        run: |
+          pnpm run toots:crawl \
+            --output "${{ env.FILE }}"
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: daily crawl
+
+      - name: combine
+        run: |
+          pnpm run toots:combine \
+            --input "${{ env.FILE }}" \
+            --output "./src/lib/data/servers.json"
+
+      - name: set-date
+        run: |
+          echo "{\"at\":\"$(date +%Y-%m-%d)\"}" > ./src/lib/data/update.json
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: daily combine

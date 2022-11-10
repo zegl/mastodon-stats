@@ -1,5 +1,6 @@
 <script lang="ts">
 	import data from '$lib/data/servers.json';
+	import update from '$lib/data/update.json'
 
 	let sortBy = 'lastWeekStatuses';
 
@@ -69,7 +70,7 @@
 	</p>
 
 	<p class="text-gray-500">
-		By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash; Updated 2022-11-10
+		By <a class="underline" href="https://mastodon.se/@z">@z@mastodon.se</a> &mdash; Updated {update.at}
 		&mdash; 🕷
 	</p>
 
