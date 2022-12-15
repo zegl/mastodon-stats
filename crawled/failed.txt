@@ -33414,3 +33414,16 @@ social.ancow.name
 micro.baixllobregat.social
 shorage.de
 appellate.social
+mastodon.eiabea.com
+the.goofs.space
+fedi.at
+social.stlouist.com
+durel.org
+suedi.club
+sandiegourbanists.com
+gorf.space
+lawtalk.social
+social.roger.family
+thegem.city
+microscopic.network
+moe.pastwind.top
