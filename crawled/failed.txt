@@ -33483,3 +33483,13 @@ mastodon.insert.tk
 discourse.social
 hngh.io
 social.dbot.dev
+mastodon.kleph.eu
+social.spainco.net
+jax.social
+mastogram.com
+byteshift.io
+bikesare.cool
+geislingen.net
+colliderbias.net
+mastodon.africa
+blackshuck.net
