@@ -33533,3 +33533,11 @@ typo.social
 mastodon.hamster.science
 mastodon.tech-nico.de
 mastodon.kneitzel.de
+ocf.masto.host
+jade.moe
+glaceon.social
+technodon.social
+social.stefanberger.net
+matthewedavis.online
+rando.social
+academe.world
