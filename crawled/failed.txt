@@ -33583,3 +33583,8 @@ tech-savvy.social
 betterodds.social
 saptodon.org
 skastodon.com
+chatterly.me
+zeroes.ca
+blobfox.coffee
+metasocial.com
+xn--trt-tna.wala2x.de
