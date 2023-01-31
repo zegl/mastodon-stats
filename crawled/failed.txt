@@ -33784,3 +33784,11 @@ social.yaofur.com
 foowp.org
 m.salundo.com
 foritso.com
+celt.social
+mastodonapp.uk
+wellduck.me
+mastodon.steinernebruecke.de
+col.social
+genomic.social
+social.jacobandersen.dev
+nemertes.nl
