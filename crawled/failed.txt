@@ -33812,3 +33812,15 @@ social.lindsaybison.com
 megalodon.social
 mastodon.humanists.uk
 mastodon.maara.dev
+freifunk.social
+esolis.social
+gd.social
+talk.ogre.red
+slon.yojik.net
+toots.hilandchris.com
+thoughtify.space
+social.seewindows.com
+borgsocial.org
+tinnies.club
+walrusmafia.com
+nimbus.social
