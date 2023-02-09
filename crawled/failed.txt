@@ -33833,3 +33833,5 @@ mindly.social
 mstdn.kurosuke.org
 zbop.xyz
 mstdn.starnix.network
+red.niboe.info
+kanoa.de
