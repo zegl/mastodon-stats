@@ -33873,3 +33873,7 @@ social.the-thirstiest-mawile.com
 social.chvp.be
 social.da-am.com
 mond-basis.eu
+mastodon.hoppinglife.com
+securecryptomining.com
+vrsimility.masto.host
+oldinternet.net
