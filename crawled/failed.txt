@@ -33919,3 +33919,5 @@ mastodon.lateral8.com
 mastodon.gerkenator.com
 mast.yurec.online
 social.vleij.com
+augsburg.social
+glacierfoods.social
