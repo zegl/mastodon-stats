@@ -33929,3 +33929,6 @@ paddys.pub
 unperson.us
 is.lewd.pm
 freesocial.co
+welsea.site
+mastodon.jmtr.org
+queerdon.social
