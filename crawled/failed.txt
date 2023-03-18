@@ -33946,3 +33946,5 @@ social.netdc.ca
 so.fnky.nz
 social.synesthesia.co.uk
 makervine.net
+toot.plus.yt
+mapstodon.space
