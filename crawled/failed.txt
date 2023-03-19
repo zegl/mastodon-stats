@@ -33948,3 +33948,4 @@ social.synesthesia.co.uk
 makervine.net
 toot.plus.yt
 mapstodon.space
+cantos.social
