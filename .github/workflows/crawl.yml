@@ -3,7 +3,7 @@ name: daily crawl
 on:
   schedule:
     # every day at 4am
-    - cron: '0 4 * * *'
+    # - cron: '0 4 * * *'
   workflow_dispatch: {}
 
 jobs:
